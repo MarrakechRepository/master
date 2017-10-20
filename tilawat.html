@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" >
+<head>
+	<meta charset="UTF-8" />
+	<title>Quran play - js</title>
+	<link rel="stylesheet" href="css/myFramwork-css.css"/>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+</head>
+<body>
+	<nav class="no-decore" >
+		<ul>
+			<span class="logo"></span>
+			<li><a href="index.html">الرئيسية</a></li>
+			<li><a href="alQurae.html">قراء مشهورين</a></li>
+			<li><a class="active" href="tilawat.html">تلاوات مختارة</a></li>
+			<li><a href="about.html">حول الموقع</a></li>
+			<li><a href="contact.html">تواصل معنا</a></li>
+		</ul>
+	</nav>
+	<div class="bot-nav" ></div>
+	<header id="header"></header>
+	
+	<div class="containerSimple" >
+	<h3>قائمة التشغيل : </h3>
+	<p>قائمة تشغيل جميع السور في هذه الصفحة</p>
+	<audio controls class="hide" id="playNow" ></audio>
+	<div class="controllers">
+    <i class="fa fa-random" aria-hidden="true"></i>
+    <i class="fa fa-fast-backward" aria-hidden="true"></i>
+    <i id="control" class="fa fa-play" aria-hidden="true"></i>
+    <i class="fa fa-fast-forward" aria-hidden="true"></i>
+    <i class="fa fa-retweet" aria-hidden="true"></i>
+	</div>
+	<div class="sorahInfo" ></div>
+	<hr />
+	
+	<table>
+		<tr>
+			<td>اسماء السور</td>
+			<td>اسم القارئ</td>
+			<td>مشغل السورة</td>
+		</tr>
+	</table>
+
+</div>
+
+<footer id="footer" ></footer>
+<script type="text/javascript" src="script/elementsHTML.js"></script>
+<script type="text/javascript" src="script/quranScripts.js"></script>
+</body>
+</html>
