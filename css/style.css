@@ -14,15 +14,16 @@
 	src: url('../fonts/arabswell-3.ttf');
 }
 /************************/
-/* global styles */
+/* Style for font qlQuran */
 .quran {
 	font-family: quran;
 	font-size: 26px;
 }
 /*************************************/
-/* start styles of element ***************/
+/* start styles of Global element ***************/
 
-body { 
+body {
+	position: relative; 
 	margin: 0; padding: 0;
 	direction: rtl;
 	background-color: #eee;
@@ -39,6 +40,18 @@ p {
 	padding: 5px;
 }
 
+nav .logo {
+	border-radius: 50%;
+	width: 60px;
+	height: 40px;
+	border: 1px solid goldenrod;
+	display: inline-block;
+	margin-top: 11px;
+	margin-bottom: -11px;
+	margin-right: -20px;
+	background-image: url('../img/logo.jpg');
+	background-size: cover;
+}
 nav {
 	width: 100%;
 	padding: 0;
@@ -56,25 +69,14 @@ nav ul li a { padding: 15px; transition: all 0.25s linear; }
 nav ul li a:hover { background-color: #e1e1e1;color: #131;}
 nav ul {margin-top: 2px; margin-bottom: 11px;}
 nav ul li { display: inline-block}
+nav .drop { display: none}
+
+.bot-nav { margin-top: 110px }
 
 .active { background-color: #eee;color: #151;}
 
-/* end styles of element ****************/
+/* end styles of Global element ****************/
 /* start classes ************************/
-.bot-nav { margin-top: 110px }
-
-.logo {
-	border-radius: 50%;
-	width: 60px;
-	height: 40px;
-	border: 1px solid goldenrod;
-	display: inline-block;
-	margin-top: 11px;
-	margin-bottom: -11px;
-	margin-right: -20px;
-	background-image: url('../img/log.jpg');
-	background-size: cover;
-}
 
 .container , .containerSimple {
 	width: 90%;
@@ -88,7 +90,9 @@ nav ul li { display: inline-block}
 	box-shadow: -11px 11px 51px #494;
 	border: 1px solid #eee;
 }
-.container { max-height: 440px; overflow: auto;}
+
+/* => page: alQurae */
+.container { max-height: 440px; overflow: scroll;}
 .container img {
 	width: calc(100% / 3);
 	height: 300px;
@@ -98,45 +102,7 @@ nav ul li { display: inline-block}
 .container p {width: calc(100% / 1.5)}
 .container > p > a { color: #aaa; float: left;}
 
-.containerSimple .about {
-	margin: 10px auto;
-	padding: 10px;
-	font-size: 22px;
-	direction: rtl;
-	text-align: right;
-}
-
-.containerSimple .about ul li::before {
-	content: "<> ";
-}
-
-.containerSimple .about center {
-	margin-top: 20px;
-}
-
-.contact div i { margin: 8px }
-
-.contact div {
-	color: #fff;
-	width: 50%;
-	margin: 10px auto;
-	padding: 5px;
-	border: 1px solid #333;
-	border-radius: 10%;
-}
-
-.fb { background-color: #118;}
-.fb:hover { background-color: #11b;}
-
-.tw { background-color: #0a9999;}
-.tw:hover { background-color: #45a4ca;}
-
-.gp { background-color: #992504;}
-.gp:hover { background-color: #cc1616;}
-
-.git { background-color: #193334;}
-.git:hover { background-color: #493334;}
-
+/* => page: Tilawat */
 .controllers {
 	background-color: rgba(0,0,0,.4);
 	margin: 5px auto;
@@ -175,9 +141,57 @@ table td {
 	width: calc(100% / 3);
 }
 
+/* => page: About */
+.containerSimple .about {
+	margin: 10px auto;
+	padding: 10px;
+	font-size: 22px;
+	direction: rtl;
+	text-align: right;
+}
+
+.containerSimple .about ul li::before {
+	content: "<> ";
+}
+
+.containerSimple .about center {
+	margin-top: 20px;
+}
+
+/* => page: Contact */
+.contact div i { margin: 8px }
+
+.contact div {
+	color: #fff;
+	width: 50%;
+	margin: 10px auto;
+	padding: 5px;
+	border: 1px solid #333;
+	border-radius: 10%;
+}
+
+.mail {background-color: #2c1010}
+.mail:hover {background-color: #473333}
+
+.fb { background-color: #118;}
+.fb:hover { background-color: #11b;}
+
+.tw { background-color: #0a9999;}
+.tw:hover { background-color: #45a4ca;}
+
+.gp { background-color: #992504;}
+.gp:hover { background-color: #cc1616;}
+
+.git { background-color: #193334;}
+.git:hover { background-color: #493334;}
+
 /* end classes *********************/
-/* footer of page ****************/
+/* footer of pages ****************/
 footer {
+	position: absolute;
+	bottom: 0:
+	right: 0;
+	left: 0;
 	width: 100%;
 	display: block;
 	background-color: #020;
@@ -196,6 +210,7 @@ footer > div {
 /* Media query */
 
 @media ( max-width:767px ) {
+	/* Global classes and elment */
 	.quran {
 		font-size: 16px;
 	}
@@ -205,45 +220,38 @@ footer > div {
 		line-height: 1.4;
 		padding: 2px;
 	}
-
+	nav .logo {
+		border-radius: 50%;
+		width: 60px;
+		height: 40px;
+		display: inline-block;
+		margin: 10px;
+		background-image: url('../img/log.jpg');
+		background-size: cover;
+	}
 	nav {
 		position: fixed;
 		border-bottom: 3px solid #bbb;
 		font-size: 27px;
 		z-index: 2;
 	}
-	nav::after {
-		content: "==";
-		position: absolute;
-		top: 20px;
-		left: 10px;
-		width: 33px;
-		height: 33px;
-		background: #fff;
-	}
-	nav ul li { display: none }
-	nav ul li:after { content: "" }
-	nav ul li a { padding: 15px; transition: all 0.25s linear;display: block; }
+	nav ul li { display: block }
+	nav ul li:after { content: "" !important }
+	nav ul li a { padding: 5px; transition: all 0.25s linear;display: block; }
 	nav ul li a:hover { background-color: #e1e1e1;color: #131;}
-	nav ul {margin-top: 2px; margin-bottom: 11px;}
-	nav::after:hover li { display: none }
+	nav ul {margin-right: -30px;display: none}
+	.drop {
+		display: inline-block;
+		background: #fff;
+		color: #222;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+	}
+	.bot-nav { margin-top: 60px }
 
 	/* end styles of element ****************/
 	/* start classes ************************/
-	.bot-nav { margin-top: 60px }
-
-	.logo {
-		border-radius: 50%;
-		width: 60px;
-		height: 40px;
-		border: 1px solid goldenrod;
-		display: inline-block;
-		margin-top: 11px;
-		margin-bottom: -11px;
-		margin-right: -20px;
-		background-image: url('../img/log.jpg');
-		background-size: cover;
-	}
 
 	.container , .containerSimple {
 		width: 100%;
@@ -255,7 +263,7 @@ footer > div {
 	}
 	.container { max-height: 80px; overflow: hidden;}
 	.container img { height: auto; }
-
+	/* => page: Tilawat */
 	.controllers {
 		width: 100%;
 		margin: 2px;
@@ -267,6 +275,8 @@ footer > div {
 		padding-top: 5px;
 		font-size: 14px;
 	}
+
+	/* => page: Contact */
 	.contact div { width: 100%;}
 	/* end classes *********************/
 	/* footer of page ****************/	

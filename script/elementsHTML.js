@@ -10,9 +10,8 @@
         left = document.createElement('div');
 
     right.innerHTML = "جميع الحقوق &copy; محفوظة لاصحابها";
-    left.innerHTML = 'تصميم و برمجة محسن ابوتاج 1438/2017';
+    left.innerHTML = 'تصميم و برمجة <b>محسن ابوتاج</b> 1438/2017';
     
     footer.appendChild(right);
     footer.appendChild(left);
 })();
-
