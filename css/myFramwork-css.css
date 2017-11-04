@@ -1,19 +1,16 @@
 /* This Framwork created by < MOHSSINE ABOUTAJ > in 1438-2017 */
 /********************************************************/
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-	  -ms-box-sizing: border-box;
-       -o-box-sizing: border-box;
-          box-sizing: border-box; }
-
+* {-webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+         -o-box-sizing: border-box;
+            box-sizing: border-box; }
 .clearfix{clear: both;}
-
 .fl-r {float: right;}
 .fl-l {float: left;}
 .txt-c {text-align: center;}
 .hide { display: none;}
+.no-decore {list-style: none;text-decoration: none;color: inherit}
 .no-decore li {list-style-type:none}
 .no-decore a {text-decoration: none}
-.no-border {border: none;}
-.no-border-all , .no-border-all * {border: none;}
+.no-border , .no-border-all , .no-border-all * {border: none;}

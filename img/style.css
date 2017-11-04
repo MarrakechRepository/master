@@ -1,0 +1,363 @@
+/* Created by < MOHSSINE ABOUTAJ > in 1438-2017 */
+/************************************************/
+/* font faces */
+@font-face {
+	font-family: moNowel;
+	src: url('../fonts/moNowel.ttf');
+}
+@font-face {
+	font-family: quran;
+	src: url('../fonts/quran.ttf');
+}
+@font-face {
+	font-family: Xarabic;
+	src: url('../fonts/arabswell-3.ttf');
+}
+/************************/
+/* Style for font qlQuran */
+.quran {
+	font-family: quran;
+	font-size: 26px;
+}
+/*************************************/
+/* start styles of Global element ***************/
+
+body {
+	position: relative; 
+	margin: 0; padding: 0;
+	direction: rtl;
+	background-color: #eee;
+	font-family: moNowel;
+}
+
+h1 , h2 , nav { font-family: Xarabic;}
+
+span { font-weight: bold; color: gold; }
+
+p {
+	font-size: 22px;
+	line-height: 1.6;
+	padding: 5px;
+}
+
+nav {
+	width: 100%;
+	padding: 0;
+	direction: rtl;
+	position: fixed !important;
+	top: 0;
+	background-color: #121;
+	border-bottom: 3px solid #bbb;
+	font-size: 27px;
+	z-index: 2;
+	transition: all 0.5s;
+}
+nav .logo {
+	border-radius: 50%;
+	width: 60px;
+	height: 40px;
+	display: block;
+	margin: 10px 20px;
+	background-image: url('../img/logo.jpg');
+	background-size: cover;
+}
+nav * {color: #ffc;}
+nav ul li:not(:last-of-type):after { content: " | " }
+nav ul li a { padding: 15px; transition: all 0.25s linear; }
+nav ul li a:hover { background-color: #e1e1e1;color: #131;}
+nav ul {margin: -30px 50px 10px 0px;}
+nav ul li { display: inline-block}
+nav .drop { display: none}
+
+.bot-nav { margin-top: 110px }
+
+.active { background-color: #eee;color: #151;}
+
+/* end styles of Global element ****************/
+/* start classes ************************/
+
+.container , .containerSimple {
+	width: 90%;
+	margin: 10px auto;
+	padding: 10px;
+	font-size: 18px;
+	text-align: center;
+	opacity: .64;
+	background-color: #121;
+	color: white;
+	box-shadow: -11px 11px 51px #494;
+	border: 1px solid #eee;
+}
+
+/* => page: alQurae */
+.container { max-height: 440px; overflow: scroll;}
+.container img {
+	width: calc(100% / 3);
+	height: 300px;
+	border-radius: 50%;
+}
+.container p , .container img {float: right;}
+.container p {width: calc(100% / 1.5)}
+.container > p > a { color: #aaa; float: left;}
+
+/* => page: Tilawat */
+.controllers {
+	background-color: rgba(0,0,0,.4);
+	margin: 5px auto;
+	padding: 20px;
+	width: 60%;
+	direction: ltr;
+	text-align: center;
+	font-size: 22px;
+	border-radius: 20%;
+}
+.controllers .fa {
+	color: #b19393;
+	margin: 5px;
+}
+.controllers .fa:hover { color: #e6dada;cursor: pointer}
+
+.sorahInfo {
+	padding-top: 10px;
+	direction: rtl;
+	font-size: 22px;
+}
+
+table {
+	margin: 5px auto;
+	border-radius: 10px;
+	width: 95%;
+	font-size: 18px;
+	font-family: arial;
+	display: table;
+}
+table td {
+	border: 2px solid #393;
+	padding: 5px;
+	display: table-cell;
+	vertical-align: middle;
+	width: calc(100% / 3);
+}
+
+/* => page: About */
+.containerSimple .about {
+	margin: 10px auto;
+	padding: 10px;
+	font-size: 22px;
+	direction: rtl;
+	text-align: right;
+}
+
+.containerSimple .about ul li::before {
+	content: "<> ";
+}
+
+.containerSimple .about center {
+	margin-top: 20px;
+}
+
+/* => page: Contact */
+.contact div i { margin: 8px }
+
+.contact div {
+	color: #fff;
+	width: 50%;
+	margin: 10px auto;
+	padding: 5px;
+	border: 1px solid #333;
+	border-radius: 10%;
+}
+
+.mail {background-color: #2c1010}
+.mail:hover {background-color: #473333}
+
+.fb { background-color: #118;}
+.fb:hover { background-color: #11b;}
+
+.tw { background-color: #0a9999;}
+.tw:hover { background-color: #45a4ca;}
+
+.gp { background-color: #992504;}
+.gp:hover { background-color: #cc1616;}
+
+.git { background-color: #193334;}
+.git:hover { background-color: #493334;}
+
+/* end classes *********************/
+/* footer of pages ****************/
+footer {
+	position: absolute;
+	bottom: 0:
+	right: 0;
+	left: 0;
+	width: 100%;
+	display: block;
+	background-color: #020;
+	color: white;
+	font-size: 18px;
+	border-top: 1px solid green;
+	height: 44px;
+}
+footer > div {
+	float: right;
+	padding: 5px;
+	width: 50%;
+	text-align: center;
+}
+
+/* Media query */
+
+/* for Large screens */
+@media ( min-width:1200px ) {
+	.container , .containerSimple { max-width: 1500px; }
+}
+
+/* for Tablet screens */
+@media ( min-width:769px ) and ( max-width: 991) {
+		/* Global classes and elment */
+		.quran {
+			font-size: 22px;
+		}
+	
+		p {
+			font-size: 16px;
+		}
+		nav .logo {
+			margin: 5px;
+		}
+		nav {
+			font-size: 24px;
+		}
+		nav ul li { display: block }
+		nav ul li:after { content: "" !important }
+		nav ul li a { padding: 5px; transition: all 0.25s linear;display: block; }
+		nav ul li a:hover { background-color: #e1e1e1;color: #131;}
+		nav ul {margin-right: -30px;display: none}
+		.drop {
+			display: inline-block;
+			background: #fff;
+			color: #222;
+			position: absolute;
+			top: 10px;
+			left: 10px;
+		}
+		.bot-nav { margin-top: 30px !important }
+		
+		/* end styles of element ****************/
+		/* start classes ************************/
+	
+		.container , .containerSimple {
+			width: 100%;
+			margin: 5px;
+			padding: 5px;
+			font-size: 12px;
+			box-shadow: none;
+			border: none;
+		}
+		.container { max-height: 60px; overflow: hidden;}
+		.container img { height: auto; }
+		/* => page: Tilawat */
+		.controllers {
+			width: 100%;
+			margin: 2px;
+			font-size: 20px;
+		}
+	
+		.sorahInfo {
+			padding-top: 5px;
+			font-size: 18px;
+		}
+	
+		/* => page: Contact */
+		.contact div { width: 100%;}
+		/* end classes *********************/
+		/* footer of page ****************/	
+		footer {
+			height: auto;
+			font-size: 10px;
+		}
+		footer > div {
+			padding: 2px;
+			width: 100%;
+			float: none;
+		}
+}
+
+/* for smartphone and small screens */
+@media ( max-width:768px ) {
+	/* Global classes and elment */
+	.quran {
+		font-size: 16px;
+	}
+
+	p {
+		font-size: 14px;
+		line-height: 1.4;
+		padding: 2px;
+	}
+	nav .logo {
+		margin: 10px;
+	}
+	nav {
+		font-size: 30px;
+	}
+	nav ul li { display: block }
+	nav ul li:after { content: "" !important }
+	nav ul li a { padding: 5px; transition: all 0.25s linear;display: block; }
+	nav ul {margin-right: -30px;display: none;margin-top: 5px}
+	.drop {
+		display: inline-block !important;
+		color: #fff;
+		background-color: #222;
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		font-size: 40px;
+		transition: all 0.5s;
+	}
+	.drop:hover {
+		background: #fff;
+		color: #121;
+		cursor: pointer;
+	}
+
+	.bot-nav { margin-top: 60px }
+
+	/* end styles of element ****************/
+	/* start classes ************************/
+
+	.container , .containerSimple {
+		width: 100%;
+		font-size: 12px;
+		box-shadow: none;
+		border: none;
+	}
+	.container { max-height: 250px; overflow: scroll;}
+	.container img { height: auto; }
+	/* => page: Tilawat */
+	.controllers {
+		width: 100%;
+		margin: 2px;
+		font-size: 18px;
+	}
+	.controllers .fa { margin: 2px; }
+
+	.sorahInfo {
+		padding-top: 5px;
+		font-size: 14px;
+	}
+
+	/* => page: Contact */
+	.contact div { width: 100%;}
+	/* end classes *********************/
+	/* footer of page ****************/	
+	footer {
+		height: auto;
+		font-size: 11px;
+	}
+	footer > div {
+		padding: 2px;
+		width: 100%;
+		float: none;
+	}
+}
